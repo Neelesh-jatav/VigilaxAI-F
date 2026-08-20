@@ -1,0 +1,2036 @@
+@import url(
+  'https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Roboto+Condensed:wght@400;700&display=swap'
+);
+
+
+/* ============================================================
+   ROOT
+============================================================ */
+
+:root {
+
+  --bg-main:
+    #0f1412;
+
+  --bg-card:
+    #151b16;
+
+  --bg-elevated:
+    #1a221c;
+
+  --text-primary:
+    #e8ece5;
+
+  --text-secondary:
+    #b8c0b2;
+
+  --text-muted:
+    #8b9489;
+
+  --primary:
+    #8fbf3a;
+
+  --primary-hover:
+    #a6d74a;
+
+  --danger:
+    #d04a3a;
+
+  --danger-hover:
+    #e15644;
+
+  --success:
+    #3ab981;
+
+  --success-hover:
+    #46d194;
+
+  --warning:
+    #d9a441;
+
+  --accent-sand:
+    #c7b98a;
+
+  --border:
+    #2a332b;
+
+  --shadow-sm:
+    0 2px 6px
+    rgba(0, 0, 0, 0.25);
+
+  --shadow-md:
+    0 10px 24px
+    rgba(0, 0, 0, 0.35);
+
+  --shadow-lg:
+    0 20px 40px
+    rgba(0, 0, 0, 0.45);
+
+  --radius-md:
+    14px;
+
+  --transition:
+    all 0.25s
+    cubic-bezier(
+      0.4,
+      0,
+      0.2,
+      1
+    );
+
+}
+
+
+/* ============================================================
+   RESET
+============================================================ */
+
+* {
+
+  box-sizing:
+    border-box;
+
+  margin:
+    0;
+
+  padding:
+    0;
+
+}
+
+
+html,
+body,
+#root {
+
+  width:
+    100%;
+
+  min-height:
+    100%;
+
+}
+
+
+body {
+
+  margin:
+    0;
+
+  font-family:
+    "Rajdhani",
+    "Roboto Condensed",
+    "Segoe UI",
+    sans-serif;
+
+  color:
+    var(--text-primary);
+
+  background:
+
+    radial-gradient(
+      1200px 800px at 15% -10%,
+      rgba(
+        143,
+        191,
+        58,
+        0.18
+      ),
+      transparent 55%
+    ),
+
+    radial-gradient(
+      900px 600px at 90% 10%,
+      rgba(
+        217,
+        164,
+        65,
+        0.12
+      ),
+      transparent 60%
+    ),
+
+    linear-gradient(
+      180deg,
+      #0d1210 0%,
+      #0f1412 45%,
+      #0b0f0d 100%
+    );
+
+  line-height:
+    1.4;
+
+}
+
+
+button,
+input {
+
+  font-family:
+    inherit;
+
+}
+
+
+/* ============================================================
+   APP
+============================================================ */
+
+.app {
+
+  min-height:
+    100vh;
+
+  padding:
+    10px 14px;
+
+}
+
+
+.vx-container {
+
+  width:
+    100%;
+
+  max-width:
+    1500px;
+
+  margin:
+    0 auto;
+
+}
+
+
+/* ============================================================
+   TITLE
+============================================================ */
+
+.vx-title-row {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  margin-bottom:
+    10px;
+
+}
+
+
+.vx-h1 {
+
+  margin:
+    0;
+
+  font-size:
+    1.55rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    1.1px;
+
+  text-transform:
+    uppercase;
+
+  color:
+    var(--accent-sand);
+
+}
+
+
+.vx-subtitle {
+
+  margin-top:
+    2px;
+
+  color:
+    var(--text-secondary);
+
+  font-size:
+    0.72rem;
+
+}
+
+
+/* ============================================================
+   MAIN LAYOUT
+============================================================ */
+
+.main-container {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1.9fr 1fr;
+
+  gap:
+    12px;
+
+  align-items:
+    start;
+
+}
+
+
+/* ============================================================
+   CARDS
+============================================================ */
+
+.left-box,
+.right-box {
+
+  background:
+
+    linear-gradient(
+      180deg,
+      rgba(
+        26,
+        34,
+        28,
+        0.98
+      ),
+      rgba(
+        21,
+        27,
+        22,
+        0.98
+      )
+    );
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius:
+    var(--radius-md);
+
+  padding:
+    10px;
+
+  box-shadow:
+    var(--shadow-md);
+
+}
+
+
+.left-box:hover,
+.right-box:hover {
+
+  border-color:
+    rgba(
+      143,
+      191,
+      58,
+      0.45
+    );
+
+  box-shadow:
+    var(--shadow-lg);
+
+}
+
+
+/* ============================================================
+   HEADERS
+============================================================ */
+
+.camera-header {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  gap:
+    10px;
+
+  margin-bottom:
+    8px;
+
+  padding-bottom:
+    7px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      199,
+      185,
+      138,
+      0.25
+    );
+
+}
+
+
+.camera-header h2,
+.right-box h2 {
+
+  color:
+    var(--accent-sand);
+
+  font-size:
+    0.95rem;
+
+  letter-spacing:
+    0.9px;
+
+  text-transform:
+    uppercase;
+
+}
+
+
+/* ============================================================
+   ACTIVE MODEL
+============================================================ */
+
+.active-model {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    6px;
+
+  padding:
+    5px 9px;
+
+  border-radius:
+    999px;
+
+  background:
+    rgba(
+      58,
+      185,
+      129,
+      0.12
+    );
+
+  border:
+    1px solid
+    rgba(
+      58,
+      185,
+      129,
+      0.35
+    );
+
+  color:
+    #9ce6ba;
+
+  font-size:
+    11px;
+
+  font-weight:
+    600;
+
+}
+
+
+.active-dot {
+
+  width:
+    7px;
+
+  height:
+    7px;
+
+  border-radius:
+    50%;
+
+  background:
+    #22c55e;
+
+  box-shadow:
+    0 0 10px
+    rgba(
+      34,
+      197,
+      94,
+      0.9
+    );
+
+}
+
+
+/* ============================================================
+   CAMERA WRAPPER
+============================================================ */
+
+.camera-detection-wrapper {
+
+  position:
+    relative;
+
+  width:
+    100%;
+
+}
+
+
+.camera-container,
+.demo-camera-container {
+
+  position:
+    relative;
+
+  width:
+    100%;
+
+  height:
+    clamp(
+      300px,
+      58vh,
+      500px
+    );
+
+  min-height:
+    300px;
+
+  background:
+    #080b10;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius:
+    10px;
+
+  overflow:
+    hidden;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+}
+
+
+/* ============================================================
+   LIVE CAMERA
+============================================================ */
+
+.camera-video {
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  object-fit:
+    contain;
+
+  display:
+    block;
+
+}
+
+
+.camera-placeholder {
+
+  color:
+    white;
+
+  text-align:
+    center;
+
+  opacity:
+    0.85;
+
+}
+
+
+.camera-placeholder-icon {
+
+  font-size:
+    45px;
+
+  margin-bottom:
+    7px;
+
+}
+
+
+.camera-placeholder p {
+
+  margin:
+    4px 0;
+
+  font-size:
+    16px;
+
+  font-weight:
+    600;
+
+}
+
+
+.camera-placeholder small {
+
+  color:
+    #9ca3af;
+
+  font-size:
+    11px;
+
+}
+
+
+.camera-error {
+
+  color:
+    #dc2626;
+
+  text-align:
+    center;
+
+  margin:
+    7px 0;
+
+  font-size:
+    11px;
+
+}
+
+
+/* ============================================================
+   DETECTION CANVAS
+
+   IMPORTANT:
+   Actual model detections are drawn here.
+============================================================ */
+
+.detection-canvas {
+
+  position:
+    absolute;
+
+  top:
+    0;
+
+  left:
+    0;
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  object-fit:
+    contain;
+
+  pointer-events:
+    none;
+
+  z-index:
+    5;
+
+}
+
+
+/* ============================================================
+   DEMO IMAGE
+
+   IMPORTANT:
+   Image is displayed normally.
+   Detection canvas is drawn by FaceDetection/
+   DroneDetection above it.
+============================================================ */
+
+.demo-detection-image,
+.demo-camera-image {
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  object-fit:
+    contain;
+
+  display:
+    block;
+
+}
+
+
+/* ============================================================
+   DETECTION STATUS
+============================================================ */
+
+.detection-overlay-status {
+
+  position:
+    absolute;
+
+  top:
+    10px;
+
+  left:
+    10px;
+
+  z-index:
+    10;
+
+  width:
+    190px;
+
+  padding:
+    8px;
+
+  background:
+    rgba(
+      15,
+      23,
+      42,
+      0.88
+    );
+
+  color:
+    white;
+
+  border-radius:
+    8px;
+
+  backdrop-filter:
+    blur(5px);
+
+  pointer-events:
+    none;
+
+}
+
+
+.detection-status-title {
+
+  font-size:
+    12px;
+
+  font-weight:
+    700;
+
+  margin-bottom:
+    6px;
+
+  padding-bottom:
+    5px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.15
+    );
+
+}
+
+
+.detection-status-row {
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    center;
+
+  margin-top:
+    5px;
+
+  font-size:
+    10px;
+
+  color:
+    var(--text-secondary);
+
+}
+
+
+.ready {
+
+  color:
+    #9ce6ba;
+
+}
+
+
+.loading {
+
+  color:
+    var(--warning);
+
+}
+
+
+.face-count {
+
+  color:
+    #9ce6ba;
+
+  font-size:
+    14px;
+
+}
+
+
+/* ============================================================
+   DETECTION ERROR
+============================================================ */
+
+.detection-error {
+
+  margin-top:
+    5px;
+
+  padding:
+    6px 8px;
+
+  border-radius:
+    6px;
+
+  background:
+    rgba(
+      220,
+      38,
+      38,
+      0.9
+    );
+
+  color:
+    white;
+
+  font-size:
+    10px;
+
+}
+
+
+/* ============================================================
+   SELECTED MODE
+============================================================ */
+
+.selected-mode {
+
+  margin-top:
+    8px;
+
+  padding:
+    7px;
+
+  background:
+    rgba(
+      12,
+      16,
+      13,
+      0.6
+    );
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius:
+    7px;
+
+  color:
+    var(--text-secondary);
+
+  text-align:
+    center;
+
+  font-size:
+    11px;
+
+}
+
+
+.selected-mode strong {
+
+  color:
+    var(--primary-hover);
+
+}
+
+
+/* ============================================================
+   CONTROLS
+============================================================ */
+
+.controls {
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    5px;
+
+  margin-top:
+    8px;
+
+}
+
+
+/* ============================================================
+   BUTTONS
+============================================================ */
+
+.btn {
+
+  width:
+    100%;
+
+  min-height:
+    30px;
+
+  padding:
+    0 10px;
+
+  border:
+    1px solid
+    rgba(
+      143,
+      191,
+      58,
+      0.45
+    );
+
+  border-radius:
+    7px;
+
+  font-size:
+    0.65rem;
+
+  font-weight:
+    700;
+
+  cursor:
+    pointer;
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    5px;
+
+  text-transform:
+    uppercase;
+
+  letter-spacing:
+    0.65px;
+
+  color:
+    var(--text-primary);
+
+  background:
+
+    linear-gradient(
+      135deg,
+      rgba(
+        143,
+        191,
+        58,
+        0.2
+      ),
+      rgba(
+        143,
+        191,
+        58,
+        0.6
+      )
+    );
+
+  transition:
+    var(--transition);
+
+}
+
+
+.btn:hover:not(:disabled) {
+
+  transform:
+    translateY(-1px);
+
+  box-shadow:
+    var(--shadow-md);
+
+}
+
+
+.btn:disabled {
+
+  opacity:
+    0.45;
+
+  cursor:
+    not-allowed;
+
+}
+
+
+/* ============================================================
+   CAMERA BUTTON
+============================================================ */
+
+.camera-btn {
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(
+        58,
+        185,
+        129,
+        0.25
+      ),
+      rgba(
+        58,
+        185,
+        129,
+        0.8
+      )
+    );
+
+  border-color:
+    rgba(
+      58,
+      185,
+      129,
+      0.6
+    );
+
+}
+
+
+/* ============================================================
+   STOP BUTTON
+============================================================ */
+
+.stop-btn {
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(
+        208,
+        74,
+        58,
+        0.3
+      ),
+      rgba(
+        208,
+        74,
+        58,
+        0.8
+      )
+    );
+
+  border-color:
+    rgba(
+      208,
+      74,
+      58,
+      0.65
+    );
+
+}
+
+
+/* ============================================================
+   MODE SECTION
+============================================================ */
+
+.mode-section {
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    4px;
+
+}
+
+
+.mode-section h3 {
+
+  margin:
+    3px 0;
+
+  color:
+    var(--text-primary);
+
+  text-transform:
+    uppercase;
+
+  font-size:
+    0.68rem;
+
+}
+
+
+.mode-btn {
+
+  background:
+    linear-gradient(
+      135deg,
+      #36413d,
+      #2a322f
+    );
+
+  border-color:
+    var(--border);
+
+}
+
+
+.active-face {
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--success),
+      var(--success-hover)
+    ) !important;
+
+  color:
+    #08150e !important;
+
+}
+
+
+.active-drone {
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary),
+      var(--primary-hover)
+    ) !important;
+
+  color:
+    #0d1a11 !important;
+
+}
+
+
+.mode-off {
+
+  background:
+    linear-gradient(
+      135deg,
+      #485350,
+      #373d3b
+    );
+
+}
+
+
+/* ============================================================
+   STATUS
+============================================================ */
+
+.status-message {
+
+  margin-top:
+    6px;
+
+  padding:
+    6px 8px;
+
+  border-radius:
+    6px;
+
+  background:
+    rgba(
+      143,
+      191,
+      58,
+      0.08
+    );
+
+  border:
+    1px solid
+    rgba(
+      143,
+      191,
+      58,
+      0.25
+    );
+
+  color:
+    #dfe9d6;
+
+  text-align:
+    center;
+
+  font-size:
+    10px;
+
+}
+
+
+/* ============================================================
+   ACTUAL MODEL DEMO PANEL
+============================================================ */
+
+.demo-panel {
+
+  margin-top:
+    6px;
+
+  padding:
+    7px;
+
+  background:
+    rgba(
+      143,
+      191,
+      58,
+      0.045
+    );
+
+  border:
+    1px solid
+    rgba(
+      143,
+      191,
+      58,
+      0.25
+    );
+
+  border-radius:
+    7px;
+
+}
+
+
+.demo-panel-title {
+
+  margin-bottom:
+    3px;
+
+  color:
+    var(--accent-sand);
+
+  font-size:
+    9px;
+
+  font-weight:
+    700;
+
+  text-transform:
+    uppercase;
+
+}
+
+
+.demo-description {
+
+  margin-bottom:
+    5px;
+
+  color:
+    var(--text-muted);
+
+  font-size:
+    8px;
+
+  line-height:
+    1.2;
+
+}
+
+
+.demo-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:
+    5px;
+
+}
+
+
+.demo-btn {
+
+  min-height:
+    30px;
+
+  padding:
+    4px;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius:
+    5px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2d3731,
+      #222a25
+    );
+
+  color:
+    var(--text-primary);
+
+  font-family:
+    inherit;
+
+  font-size:
+    9px;
+
+  font-weight:
+    700;
+
+  cursor:
+    pointer;
+
+}
+
+
+.demo-btn:hover {
+
+  border-color:
+    var(--primary);
+
+}
+
+
+.demo-active {
+
+  border-color:
+    var(--primary) !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary),
+      var(--primary-hover)
+    ) !important;
+
+  color:
+    #0b130d !important;
+
+}
+
+
+.human-demo-btn {
+
+  border-color:
+    rgba(
+      58,
+      185,
+      129,
+      0.4
+    );
+
+}
+
+
+.drone-demo-btn {
+
+  border-color:
+    rgba(
+      143,
+      191,
+      58,
+      0.4
+    );
+
+}
+
+
+.demo-clear-btn {
+
+  width:
+    100%;
+
+  height:
+    25px;
+
+  margin-top:
+    5px;
+
+  border:
+    1px solid
+    rgba(
+      208,
+      74,
+      58,
+      0.4
+    );
+
+  border-radius:
+    5px;
+
+  background:
+    rgba(
+      208,
+      74,
+      58,
+      0.08
+    );
+
+  color:
+    #e9aaa2;
+
+  font-family:
+    inherit;
+
+  font-size:
+    8px;
+
+  font-weight:
+    700;
+
+  cursor:
+    pointer;
+
+}
+
+
+.demo-clear-btn:disabled {
+
+  opacity:
+    0.35;
+
+  cursor:
+    not-allowed;
+
+}
+
+
+/* ============================================================
+   AUDIO
+============================================================ */
+
+.audio-panel-wrapper {
+
+  margin-top:
+    5px;
+
+  padding-top:
+    5px;
+
+  border-top:
+    1px solid
+    var(--border);
+
+}
+
+
+.audio-detection {
+
+  background:
+    rgba(
+      35,
+      45,
+      41,
+      0.9
+    );
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius:
+    8px;
+
+  padding:
+    7px;
+
+}
+
+
+.audio-detection h3 {
+
+  margin-bottom:
+    5px;
+
+  font-size:
+    12px;
+
+  color:
+    var(--text-primary);
+
+  text-transform:
+    uppercase;
+
+}
+
+
+.audio-detection input[type="file"] {
+
+  width:
+    100%;
+
+  height:
+    28px;
+
+  padding:
+    3px 5px;
+
+  margin:
+    2px 0 5px;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius:
+    5px;
+
+  background:
+    rgba(
+      15,
+      20,
+      18,
+      0.8
+    );
+
+  color:
+    var(--text-primary);
+
+  font-size:
+    9px;
+
+}
+
+
+/* ============================================================
+   AUDIO FILE
+============================================================ */
+
+.audio-file {
+
+  margin-bottom:
+    5px;
+
+  padding:
+    5px 6px;
+
+  background:
+    rgba(
+      15,
+      20,
+      18,
+      0.8
+    );
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius:
+    5px;
+
+  color:
+    var(--text-secondary);
+
+  font-size:
+    9px;
+
+  white-space:
+    nowrap;
+
+  overflow:
+    hidden;
+
+  text-overflow:
+    ellipsis;
+
+}
+
+
+.demo-audio-tag {
+
+  display:
+    inline-block;
+
+  margin-right:
+    5px;
+
+  padding:
+    2px 4px;
+
+  border-radius:
+    3px;
+
+  background:
+    var(--warning);
+
+  color:
+    #16130d;
+
+  font-size:
+    7px;
+
+  font-weight:
+    700;
+
+}
+
+
+/* ============================================================
+   AUDIO DEMO
+============================================================ */
+
+.audio-demo-section {
+
+  margin-top:
+    5px;
+
+  padding:
+    5px;
+
+  border:
+    1px solid
+    rgba(
+      143,
+      191,
+      58,
+      0.2
+    );
+
+  border-radius:
+    6px;
+
+}
+
+
+.audio-demo-title {
+
+  margin-bottom:
+    4px;
+
+  color:
+    var(--accent-sand);
+
+  font-size:
+    9px;
+
+  font-weight:
+    700;
+
+}
+
+
+.audio-demo-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:
+    4px;
+
+}
+
+
+.audio-drone-btn {
+
+  border-color:
+    rgba(
+      208,
+      74,
+      58,
+      0.5
+    );
+
+}
+
+
+.audio-safe-btn {
+
+  border-color:
+    rgba(
+      58,
+      185,
+      129,
+      0.5
+    );
+
+}
+
+
+/* ============================================================
+   AUDIO BUTTONS
+============================================================ */
+
+.audio-buttons {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:
+    4px;
+
+  margin-top:
+    5px;
+
+}
+
+
+.audio-buttons .btn {
+
+  min-width:
+    0;
+
+}
+
+
+/* ============================================================
+   AUDIO LIVE
+============================================================ */
+
+.audio-live-status {
+
+  margin-top:
+    5px;
+
+  padding:
+    5px;
+
+  border-radius:
+    5px;
+
+  background:
+    rgba(
+      34,
+      197,
+      94,
+      0.08
+    );
+
+  border:
+    1px solid
+    rgba(
+      34,
+      197,
+      94,
+      0.25
+    );
+
+  color:
+    #86efac;
+
+  font-size:
+    8px;
+
+  font-weight:
+    700;
+
+  text-align:
+    center;
+
+}
+
+
+/* ============================================================
+   AUDIO RESULT
+============================================================ */
+
+.audio-result {
+
+  margin-top:
+    5px;
+
+  padding:
+    7px;
+
+  border-radius:
+    6px;
+
+}
+
+
+.drone-result {
+
+  background:
+    rgba(
+      208,
+      74,
+      58,
+      0.08
+    );
+
+  border:
+    1px solid
+    rgba(
+      208,
+      74,
+      58,
+      0.35
+    );
+
+  color:
+    #ffd6d0;
+
+}
+
+
+.safe-result {
+
+  background:
+    rgba(
+      58,
+      185,
+      129,
+      0.08
+    );
+
+  border:
+    1px solid
+    rgba(
+      58,
+      185,
+      129,
+      0.35
+    );
+
+  color:
+    #c9f7dd;
+
+}
+
+
+.audio-result-title {
+
+  font-size:
+    12px;
+
+  font-weight:
+    700;
+
+  margin-bottom:
+    4px;
+
+}
+
+
+.audio-probability {
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  gap:
+    8px;
+
+  font-size:
+    9px;
+
+}
+
+
+.audio-probability strong {
+
+  font-size:
+    11px;
+
+}
+
+
+.audio-result details {
+
+  margin-top:
+    5px;
+
+}
+
+
+.audio-result details summary {
+
+  cursor:
+    pointer;
+
+  color:
+    var(--text-muted);
+
+  font-size:
+    8px;
+
+}
+
+
+.audio-result details pre {
+
+  max-height:
+    100px;
+
+  overflow:
+    auto;
+
+  margin-top:
+    4px;
+
+  padding:
+    5px;
+
+  background:
+    #111827;
+
+  border-radius:
+    4px;
+
+  font-size:
+    7px;
+
+}
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (
+  max-width: 980px
+) {
+
+  .main-container {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .vx-h1 {
+
+    font-size:
+      1.3rem;
+
+  }
+
+
+  .camera-container,
+  .demo-camera-container {
+
+    height:
+      400px;
+
+    min-height:
+      260px;
+
+  }
+
+}
+
+
+@media (
+  max-width: 600px
+) {
+
+  .app {
+
+    padding:
+      7px;
+
+  }
+
+
+  .vx-title-row {
+
+    margin-bottom:
+      7px;
+
+  }
+
+
+  .vx-h1 {
+
+    font-size:
+      1.05rem;
+
+  }
+
+
+  .vx-subtitle {
+
+    font-size:
+      0.62rem;
+
+  }
+
+
+  .camera-container,
+  .demo-camera-container {
+
+    height:
+      320px;
+
+    min-height:
+      240px;
+
+  }
+
+
+  .demo-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .audio-demo-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+}
