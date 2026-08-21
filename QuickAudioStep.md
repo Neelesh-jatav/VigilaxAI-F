@@ -1,3 +1,18 @@
+1. Dataset — Raw Audio
+2. Create `check_dataset.py`
+3. Create `prepare_dataset.py`
+4. Create `create_spectograms.py`
+5. Create `extract_features.py`
+6. Save Extracted Features
+7. Create `train_model.py`
+8. Evaluate the Model
+9. Save the Trained Model
+10. Create `predict_audio.py`
+11. Test Drone and Non-Drone Audio
+12. Create `api.py`
+13. Connect `AudioDetection.jsx`
+14. Final Live Audio Detection
+
 VigilaxAI-F — Audio ML Detection Development Steps
 
 ### 1. Dataset — Raw Audio
